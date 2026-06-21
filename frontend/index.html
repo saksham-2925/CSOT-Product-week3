@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Voice Client</title>
+</head>
+<body>
+    <h1>Gemini Voice Client</h1>
+
+    <p>Status: <span id="status-text">Disconnected</span></p>
+
+    <hr>
+
+    <button id="mic-button" disabled>🎙️ Start Mic</button>
+    <span id="mic-label"></span>
+
+    <hr>
+
+    <div>
+        <input id="text-input" type="text" placeholder="Type a message..." disabled>
+        <button id="send-button" disabled>Send</button>
+    </div>
+
+    <hr>
+
+    <h3>Transcript</h3>
+    <div id="transcript-panel" style="border:1px solid #ccc; padding:8px; min-height:100px; max-height:300px; overflow-y:auto;">
+        <em>Conversation will appear here…</em>
+    </div>
+
+    <!-- hidden elements referenced by app.js but not needed visually -->
+    <div id="status-badge" hidden></div>
+    <div id="orb-container" hidden></div>
+    <div id="visualizer" hidden></div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
